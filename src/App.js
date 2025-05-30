@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { ThemeProvider, createTheme } from "@mui/material/styles"
+import CssBaseline from "@mui/material/CssBaseline"
+import HeroSection from "./components/HeroSection"
+import "./App.css"
+
+const theme = createTheme({
+  palette: {
+    mode: "dark",
+    primary: {
+      main: "#ff6b35",
+    },
+    secondary: {
+      main: "#ffffff",
+    },
+    background: {
+      default: "#000000",
+      paper: "#111111",
+    },
+  },
+  typography: {
+    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+  },
+})
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <HeroSection />
+    </ThemeProvider>
+  )
 }
 
-export default App;
+export default App
