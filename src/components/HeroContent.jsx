@@ -1,4 +1,4 @@
-import { Box, Typography, Button, Grid } from "@mui/material";
+import { Box, Typography, Button} from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import WorldHandpic from '../images/WorldHandpic (1).png'; // Adjust the path as necessary
 import React, { useRef } from "react";
